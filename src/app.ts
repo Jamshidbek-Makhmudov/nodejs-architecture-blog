@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { corsUrl } from './config';
+import './database'; // initialize database
 
 
 const app = express();

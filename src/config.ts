@@ -15,6 +15,7 @@ export const db = {
 };
 
 export const corsUrl = process.env.CORS_URL;
+export const dbURL = process.env.DB_URL;
 
 export const tokenInfo = {
   accessTokenValidity: parseInt(process.env.ACCESS_TOKEN_VALIDITY_SEC || '0'),
