@@ -22,6 +22,8 @@ coverage
 
 # Environment varibles
 *.env
+*.env.prod
+*.env.example
 *.env.test
 *.env copy
 
