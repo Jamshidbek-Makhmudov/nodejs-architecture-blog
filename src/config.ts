@@ -3,7 +3,7 @@ require("dotenv").config();
 export const environment = process.env.NODE_ENV;
 export const port = process.env.PORT;
 export const timezone = process.env.TZ;
-
+export const baseUrl = process.env.BASE_URL || '';
 export const db = {
   name: process.env.DB_NAME || '',
   host: process.env.DB_HOST || '',
