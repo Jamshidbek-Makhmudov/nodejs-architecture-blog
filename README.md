@@ -14,3 +14,4 @@
 8. Unit Tests & Integration Tests
 9. Docker
 10. JWT
+11. Joi
