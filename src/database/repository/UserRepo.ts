@@ -1,9 +1,9 @@
-import User, { UserModel } from '../model/User';
-import { RoleModel } from '../model/Role';
-import { InternalError } from '../../core/ApiError';
 import { Types } from 'mongoose';
-import KeystoreRepo from './KeystoreRepo';
+import { InternalError } from '../../core/ApiError';
 import Keystore from '../model/Keystore';
+import { RoleModel } from '../model/Role';
+import User, { UserModel } from '../model/User';
+import KeystoreRepo from './KeystoreRepo';
 /**Checks if a user with a given ID exists and is active. */
 async function exists(id: Types.ObjectId): Promise<boolean> {
   const user = await UserModel.exists({ _id: id, status: true });

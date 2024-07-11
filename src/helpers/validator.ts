@@ -1,7 +1,7 @@
+import { NextFunction, Request, Response } from 'express';
 import Joi from 'joi';
-import { Request, Response, NextFunction } from 'express';
-import { BadRequestError } from '../core/ApiError';
 import { Types } from 'mongoose';
+import { BadRequestError } from '../core/ApiError';
 
 export enum ValidationSource {
   BODY = 'body',
@@ -35,6 +35,7 @@ export default (
   ) =>
   (req: Request, res: Response, next: NextFunction) => {
     try {
+      
       const { error } = schema.validate(req[source]);
 
       if (!error) return next();

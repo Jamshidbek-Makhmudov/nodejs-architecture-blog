@@ -4,22 +4,24 @@ GET http://localhost:4000/api/v1/health-check
 
 
 ###
-POST http://localhost:4000/health-check
+POST http://localhost:4000/api/v1/signup/basic
 x-api-key: GCMUDiuY5a7WvyUNt9n3QztToSHzK7Uj
 Content-Type: application/json
-Authorization: Bearer <your_token_received_from_signup_or_login>
 
 {
-    "userName": "user1",
-    "password": "pass"
+    "name" : "Jamshidbek Makhmudov",
+    "email": "jamshid.makh94@gmail.com",
+    "password": "changeit",
+    "profilePicUrl": "https://media.licdn.com/dms/image/D5603AQFhoMb5VoL2Cw/profile-displayphoto-shrink_400_400/0/1711061839053?e=1726099200&v=beta&t=9dXwPitH0Otew6-U--8GfOiT-V1RvJG8cFYKEx2MxwU"
 }
 ###
 
-POST http://localhost:4000/login/
+POST http://localhost:4000/api/v1/login/basic 
+x-api-key: GCMUDiuY5a7WvyUNt9n3QztToSHzK7Uj
 Content-Type: application/json
 
 {
-    "userName": "user1",
-    "password": "pass"
+"email": "jamshid.makh94@gmail.com",
+"password": "changeit",
 }
 ###

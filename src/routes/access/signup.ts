@@ -20,12 +20,13 @@ router.post(
   validator(schema.signup),
   asyncHandler(async (req: RoleRequest, res) => {
     const user = await UserRepo.findByEmail(req.body.email);
+   
+    
     if (user) throw new BadRequestError('User already registered');
 
     const accessTokenKey = crypto.randomBytes(64).toString('hex');
     const refreshTokenKey = crypto.randomBytes(64).toString('hex');
     const passwordHash = await bcrypt.hash(req.body.password, 10);
-
     const { user: createdUser, keystore } = await UserRepo.create(
       {
         name: req.body.name,
@@ -37,14 +38,13 @@ router.post(
       refreshTokenKey,
       RoleCode.LEARNER,
     );
-
     const tokens = await createTokens(
       createdUser,
       keystore.primaryKey,
       keystore.secondaryKey,
     );
-    const userData = await getUserData(createdUser);
 
+    const userData = await getUserData(createdUser);
     new SuccessResponse('Signup Successful', {
       user: userData,
       tokens: tokens,
