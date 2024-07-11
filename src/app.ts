@@ -1,9 +1,9 @@
-import express from 'express';
 import cors from 'cors';
+import express from 'express';
 import { corsUrl } from './config';
 import './database'; // initialize database
 
-
+const baseUrl = "/api";
 const app = express();
 
 
@@ -14,9 +14,9 @@ app.use(
 app.use(cors({ origin: corsUrl, optionsSuccessStatus: 200 }));
 
 // Routes
+
 app.get("/health-check", (req, res) => {
   res.sendStatus(200);
  })
-
 
 export default app;
