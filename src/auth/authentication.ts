@@ -22,13 +22,14 @@ export default router.use(
     req.accessToken = getAccessToken(req.headers.authorization); // Express headers are auto converted to lowercase
 
     try {
+      
       const payload = await JWT.validate(req.accessToken);
       validateTokenData(payload);
-
+      
       const user = await UserRepo.findById(new Types.ObjectId(payload.sub));
       if (!user) throw new AuthFailureError('User not registered');
       req.user = user;
-
+      
       const keystore = await KeystoreRepo.findforKey(req.user, payload.prm);
       if (!keystore) throw new AuthFailureError('Invalid access token');
       req.keystore = keystore;
