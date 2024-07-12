@@ -4,6 +4,7 @@
   "description": "The architecture for nodejs backend application. It is build on top of expressjs using typescript.",
   "main": "index.js",
   "scripts": {
+    "seed": "ts-node src/database/seed/seeder.ts",
     "start": "npm run build && npm run serve",
     "dev": "nodemon src/server.ts",
     "serve": "node -r dotenv/config build/server.js",

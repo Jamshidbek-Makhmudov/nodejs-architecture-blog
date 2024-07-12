@@ -1,4 +1,5 @@
 # nodejs-architecture-blog
+
   Under Development
   <br>
 
@@ -15,3 +16,9 @@
 9. Docker
 10. JWT
 11. Joi
+
+# About The Project
+
+This project is designed for a production ready environment. It can handle the scale and complexity of a very demanding application. This project can bei used by companies like MindOrks, AfterAcademy...
+
+It is suitable for Web Apps, Mobile Apps, and other API services.

@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
-import Logger from '../core/Logger';
 import { db, dbURL } from '../config';
+import Logger from '../core/Logger';
 
 // Build the connection string
-const dbURI = dbURL || `mongodb://localhost:27017`;
+const dbURI = dbURL || `mongodb://localhost:27017/blog-app`;
 
 const options = {
   autoIndex: true,

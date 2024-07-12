@@ -1,5 +1,5 @@
-import { port } from './config';
 import app from './app';
+import { port } from './config';
 import Logger from './core/Logger';
 
 app
