@@ -22,3 +22,10 @@
 This project is designed for a production ready environment. It can handle the scale and complexity of a very demanding application. This project can bei used by companies like MindOrks, AfterAcademy...
 
 It is suitable for Web Apps, Mobile Apps, and other API services.
+
+# About The Author
+
+You can connect with me here:
+
+* [Jamshidbek Makhmudov](https://jamshid-makhmudov.vercel.app/)
+* [Linkedin](www.linkedin.com/in/jamshid-makhmudov)
