@@ -20,4 +20,8 @@ export default {
     password: Joi.string().required().min(6),
     profilePicUrl: Joi.string().optional().uri(),
   }),
+  profile: Joi.object().keys({
+    roleCode: Joi.string().required().min(5),
+    email: Joi.string().required().email(),
+  }),
 };

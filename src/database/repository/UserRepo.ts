@@ -114,6 +114,24 @@ async function updateInfo(user: User): Promise<any> {
     .lean()
     .exec();
 }
+async function updateUserDetails(user: User): Promise<any> {
+
+
+  const role = await RoleModel.findOne({ code: user.roles })
+    .select('+code')
+    .lean()
+    .exec();
+  if (!role) throw new InternalError('Role must be defined');
+
+
+  user.roles = [role];
+  user.updatedAt = new Date();
+  user.verified=true;
+
+  return UserModel.updateOne({ _id: user._id }, { $set: { ...user } })
+    .lean()
+    .exec();
+}
 
 export default {
   exists,
@@ -125,4 +143,5 @@ export default {
   create,
   update,
   updateInfo,
+  updateUserDetails,
 };
