@@ -30,10 +30,31 @@ You can connect with me here:
 * [Jamshidbek Makhmudov](https://jamshid-makhmudov.vercel.app/)
 * [Linkedin](www.linkedin.com/in/jamshid-makhmudov)
 
+## 3RE Architecture: Router, RouteHandler, ResponseHandler, ErrorHandler
+
+<p align="center">
+    <img src="https://github.com/Jamshidbek-Makhmudov/nodejs-architecture-blog/master/addons/github_assets/3RE.png">
+</p>
+<br>
+
+## Project Outline: Blogging Platform
+
+<p align="center">
+    <img src="https://github.com/Jamshidbek-Makhmudov/nodejs-architecture-blog/master/addons/github_assets/project-outline.png">
+</p>
+<br>
+
+## Request-Response Handling Schematic Diagram
+
+<p align="center">
+    <img src="https://github.com/Jamshidbek-Makhmudov/nodejs-architecture-blog/master/addons/github_assets/api-structure.png">
+</p>
+<br>
+
 Find this project useful ? ❤️
 Support it by clicking the ⭐ button on the upper right of this page. ✌️
 License
-   Copyright (C) 2024 JANISHAR ALI ANWAR
+   Copyright (C) 2024 JAMSHIDBEK MAKHMUDOV
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
