@@ -33,21 +33,21 @@ You can connect with me here:
 ## 3RE Architecture: Router, RouteHandler, ResponseHandler, ErrorHandler
 
 <p align="center">
-    <img src="https://github.com/Jamshidbek-Makhmudov/nodejs-architecture-blog/master/addons/github_assets/3RE.png">
+    <img src="/addons/github_assets/3RE.png">
 </p>
 <br>
 
 ## Project Outline: Blogging Platform
 
 <p align="center">
-    <img src="https://github.com/Jamshidbek-Makhmudov/nodejs-architecture-blog/master/addons/github_assets/project-outline.png">
+    <img src="/addons/github_assets/project-outline.png">
 </p>
 <br>
 
 ## Request-Response Handling Schematic Diagram
 
 <p align="center">
-    <img src="https://github.com/Jamshidbek-Makhmudov/nodejs-architecture-blog/master/addons/github_assets/api-structure.png">
+    <img src="/addons/github_assets/api-structure.png">
 </p>
 <br>
 
