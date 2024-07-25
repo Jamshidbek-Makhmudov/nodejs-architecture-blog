@@ -1,9 +1,10 @@
 import mongoose from 'mongoose';
-import { db, dbURL } from '../config';
+import { db, dbURL_DEV, dbURL_PROD } from '../config';
 import Logger from '../core/Logger';
 
 // Build the connection string
-const dbURI = dbURL || `mongodb://localhost:27017/blog-app`;
+const dbURL = process.env.NODE_ENV === 'production' ? dbURL_PROD : dbURL_DEV;
+const dbURI = dbURL || ``;
 
 const options = {
   autoIndex: true,
