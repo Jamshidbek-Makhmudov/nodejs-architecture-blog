@@ -15,7 +15,8 @@ export const db = {
 };
 
 export const corsUrl = process.env.CORS_URL;
-export const dbURL = process.env.DB_URL;
+export const dbURL_DEV = process.env.DB_URL_DEV;
+export const dbURL_PROD = process.env.DB_URL_PROD;
 
 export const tokenInfo = {
   accessTokenValidity: parseInt(process.env.ACCESS_TOKEN_VALIDITY_SEC || '0'),
@@ -31,7 +32,8 @@ export const redis = {
   port: parseInt(process.env.REDIS_PORT || '0'),
   password: process.env.REDIS_PASSWORD || '',
 };
-
+export const redisURL_PROD = `redis://:${redis.password}@${redis.host}:${redis.port}`;
+export const redisURL_DEV = process.env.redisURL_DEV;
 export const caching = {
   contentCacheDuration: parseInt(
     process.env.CONTENT_CACHE_DURATION_MILLIS || '600000', //10 minutes

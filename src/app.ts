@@ -1,5 +1,6 @@
 import cors from 'cors';
 import express, { NextFunction, Request, Response } from 'express';
+import './cache'; // initialize cache
 import { baseUrl, corsUrl, environment } from './config';
 import {
   ApiError,
