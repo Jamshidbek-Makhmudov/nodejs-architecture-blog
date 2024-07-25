@@ -25,6 +25,10 @@ coverage
 *.env.example
 *.env.test
 *.env copy
+test/*.env
+test/*.env.test
+test/*.env.prod
+test/*.env.dev
 
 #keys
 keys/*
