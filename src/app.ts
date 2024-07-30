@@ -9,6 +9,7 @@ import {
   NotFoundError,
 } from './core/ApiError';
 import Logger from './core/Logger';
+//import Logger from './core/LoggerForVercel';
 import './database'; // initialize database
 import routes from './routes';
 

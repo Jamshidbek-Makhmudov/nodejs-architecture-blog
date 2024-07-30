@@ -1,10 +1,13 @@
 import { createClient } from 'redis';
-import { redisURL_DEV, redisURL_PROD } from '../config';
+// import { redisURL_DEV, redisURL_PROD } from '../config';
 import Logger from '../core/Logger';
 
 
 
-const redisURL=process.env.NODE_ENV === 'production' ? redisURL_PROD : redisURL_DEV;
+// const redisURL=process.env.NODE_ENV === 'production' ? redisURL_PROD : redisURL_DEV;
+
+const redisURL = `redis://localhost:6379`;
+
 const client = createClient({ url: redisURL });
 
 client.on('connect', () => Logger.info('Cache is connecting'));
@@ -23,3 +26,4 @@ process.on('SIGINT', async () => {
 });
 
 export default client;
+
