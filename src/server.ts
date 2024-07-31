@@ -7,9 +7,3 @@ app
     Logger.info(`server running on port : ${port}`);
   })
   .on('error', (e) => Logger.error(e));
-/**todo
- * #.get with id
- * #.caching  
- * #.github CI
- * #.deploy
- * */

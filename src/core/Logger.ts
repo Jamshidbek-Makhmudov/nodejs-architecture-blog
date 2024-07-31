@@ -1,6 +1,6 @@
-import { createLogger, transports, format } from 'winston';
 import fs from 'fs';
 import path from 'path';
+import { createLogger, format, transports } from 'winston';
 import DailyRotateFile from 'winston-daily-rotate-file';
 import { environment, logDirectory } from '../config';
 

@@ -1,4 +1,5 @@
 import express from 'express';
+import { Types } from 'mongoose';
 import BlogCache from '../../cache/repository/BlogCache';
 import { NotFoundError } from '../../core/ApiError';
 import { SuccessResponse } from '../../core/ApiResponse';
@@ -22,6 +23,25 @@ router.get(
 
     if (!blog) {
       blog = await BlogRepo.findPublishedByUrl(blogUrl);
+      if (blog) await BlogCache.save(blog);
+    }
+
+    if (!blog) throw new NotFoundError('Blog not found');
+    return new SuccessResponse('success', blog).send(res);
+  }),
+);
+
+router.get(
+  '/id/:id',
+  validator(schema.blogId, ValidationSource.PARAM),
+  asyncHandler(async (req, res) => {
+    const blogId = new Types.ObjectId(req.params.id);
+    let blog = await BlogCache.fetchById(blogId);
+
+    if (!blog) {
+      blog = await BlogRepo.findInfoForPublishedById(
+        new Types.ObjectId(req.params.id),
+      );
       if (blog) await BlogCache.save(blog);
     }
 
