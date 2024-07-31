@@ -69,7 +69,7 @@ Following are the features of this project:
 </p>
 <br>
 
-## You can find the complete API documentation [here](https://documenter.getpostman.com/view/1552895/2s8Z6u4a6N)
+## You can find the complete API documentation [here]
 
 <a href="https://documenter.getpostman.com/view/25532907/2sA3kbheSS" target="_blank">
     <img src="https://raw.githubusercontent.com/afteracademy/nodejs-backend-architecture-typescript/master/addons/github_assets/api-doc-button.png" width="200" height="60"/>
