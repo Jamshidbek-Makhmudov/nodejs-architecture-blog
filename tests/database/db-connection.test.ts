@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 import { test } from "@jest/globals";
 import { createConnection } from "../../src/database";
 //src/database/index.ts
